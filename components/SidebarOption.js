@@ -1,15 +1,19 @@
 import Image from 'next/image';
-function SidebarOption({text}) {
+
+function SidebarOption({text, Icon, active}) {
   return (
-    <div className='h-[50.25px] w-fit xl:m-1 bg-red-300 flex items-center hoverAnimation'>
-      <div className='flex py-3'>
-        <div className='flex items-center justify-center w-[26.25px] h-[26.25px]'>
-          <Image src='https://rb.gy/ogau5a' width={30} height={30} />
-        </div>
-        <div className=' h-6 ml-5 mr-4'>{text}</div>
-      </div>
+    <div
+      className={`text-[#d9d9d9] flex items-center justify-center xl:justify-start text-xl space-x-4 h-[58px] hoverAnimation ${
+        active && 'font-bold'
+      }`}
+      onClick={() => active}
+    >
+      <Icon className='fill-white h-7  ' />
+      <div className='hidden xl:inline '>{text}</div>
     </div>
   );
 }
 
 export default SidebarOption;
+
+//text-[#d9d9d9] flex items-center justify-center xl:justify-start text-xl space-x-4 h-14 hoverAnimation
