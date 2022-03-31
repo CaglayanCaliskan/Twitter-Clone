@@ -10,17 +10,17 @@ import {getFirestore} from 'firebase/firestore';
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDZA0CoZLXecBUfpOOfuWEGK00Uh-CLfnI',
+  apiKey: 'AIzaSyB7WjN1CKBms1LO4RQpKqi7q7kJmplH32A',
 
-  authDomain: 'tweet-testter.firebaseapp.com',
+  authDomain: 'caglayan-twitter-clone.firebaseapp.com',
 
-  projectId: 'tweet-testter',
+  projectId: 'caglayan-twitter-clone',
 
-  storageBucket: 'tweet-testter.appspot.com',
+  storageBucket: 'caglayan-twitter-clone.appspot.com',
 
-  messagingSenderId: '912562150859',
+  messagingSenderId: '150411112296',
 
-  appId: '1:912562150859:web:a43c4771bcb371dabbaa4e',
+  appId: '1:150411112296:web:6f3e2d6b6ab32b9f1cf0dd',
 };
 
 // Initialize Firebase
