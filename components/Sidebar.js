@@ -42,8 +42,8 @@ function Sidebar() {
           className='h-10 w-10 rounded-full xl:mr-2.5 ml-1.5'
         />
         <div className='hidden xl:inline leading-5'>
-          <h4 className='font-bold'>asd</h4>
-          <p className='text-[#6e767d]'>@asd</p>
+          <h4 className='font-bold'>unknow</h4>
+          <p className='text-[#6e767d]'>@unknow</p>
         </div>
         <div className='flex-1 flex justify-end'>
           <Dots className='fill-white  h-7 hidden md:block  ' />

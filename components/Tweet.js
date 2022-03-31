@@ -3,10 +3,11 @@ import Comment from '../assets/icons/Comment.svg';
 import Retweet from '../assets/icons/Retweet.svg';
 import Like from '../assets/icons/Like.svg';
 import Share from '../assets/icons/Share.svg';
-function Tweet() {
+
+function Tweet({tweet}) {
   return (
     <div className='py-2 h-fit border-b border-gray-700 w-full '>
-      <div className='flex justify-between w-full'>
+      <div className='flex w-full'>
         <div className=' min-w-fit mx-4 py-2'>
           <img
             src='https://pbs.twimg.com/profile_images/1012204118969069571/cfS0_vK-_400x400.jpg'
@@ -14,21 +15,21 @@ function Tweet() {
             className='h-12 w-12 rounded-full mr-2.5 ml-1.5'
           />
         </div>
-        <div className=' max-w-full '>
-          <div className=' flex h-7 w-full'>
-            <h4 className='font-bold '>asd</h4>
-            <p className='text-[#6e767d]'>@asd</p>
-            <Dots className='fill-white h-7 block  ' />
+        <div className=' w-full '>
+          <div className=' flex h-7 w-full justify-between pr-2'>
+            <div className='flex'>
+              <h4 className='font-bold '>{tweet.first}</h4>
+              <p className='text-[#6e767d] ml-2'>@{tweet.first}</p>
+            </div>
+
+            <Dots className='fill-white h-7flex-1' />
           </div>
-          {/* tweet context */}
+          {/* tweet content */}
           <div
             id='tweet context'
-            className='flex  row-auto w-full text-lg text-[#d9d9d9]'
+            className='flex pt-4  row-auto w-full text-lg text-[#d9d9d9]'
           >
-            tweet hereaaaaaaaaassssssssssssssssssas tweet
-            hereaaaaaaaaassssssssssssssssssas tweetssssss
-            hereaaaaaaaaassssssssssssssssssas tweetsssssssssssssssssssss
-            hereaaaaaaaaassssssssssssssssssas
+            {tweet.tweetContent}
           </div>
           {/* tweet icons */}
 

@@ -1,29 +1,51 @@
+import {db} from '../firebase.config';
+import {collection, addDoc, serverTimestamp} from 'firebase/firestore';
+
+import {useState, useRef} from 'react';
+
+//emoji lib.
+import 'emoji-mart/css/emoji-mart.css';
+import {Picker} from 'emoji-mart';
+
+//icons
 import Media from '../assets/icons/Media.svg';
 import Gif from '../assets/icons/Gif.svg';
 import Emoji from '../assets/icons/Emoji.svg';
 import Location from '../assets/icons/Location.svg';
 
-import 'emoji-mart/css/emoji-mart.css';
-import {Picker} from 'emoji-mart';
-
-import {useState, useRef} from 'react';
-
-function TweetBox() {
-  const [input, setInput] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
+function TweetBox({onSubmitTweet}) {
+  const [tweetContent, setTweetContent] = useState('');
   const imageSelect = useRef(null);
   const [chosenEmoji, setChosenEmoji] = useState(null);
+
+  const sendTweet = async () => {
+    try {
+      const docRef = await addDoc(collection(db, 'tweets'), {
+        first: 'Unknow',
+        nick: 'Unknow',
+        tweetContent,
+        timestamp: serverTimestamp(),
+      });
+      console.log('Document written with ID: ', docRef.id);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
+    setTweetContent('');
+  };
 
   const addEmoji = (e) => {
     let sym = e.unified.split('-');
     let codesArray = [];
     sym.forEach((el) => codesArray.push('0x' + el));
     let emoji = String.fromCodePoint(...codesArray);
-    setInput(input + emoji);
+    setTweetContent(tweetContent + emoji);
   };
 
   return (
-    <div className='flex px-4 py-1 h-fit border-b border-gray-700 '>
+    <div
+      className='flex px-4 py-1 h-fit border-b border-gray-700 '
+      onClick={() => chosenEmoji && setChosenEmoji(!chosenEmoji)}
+    >
       <div className='  pt-1 flex items-start justify-center'>
         <img
           src='https://pbs.twimg.com/profile_images/1012204118969069571/cfS0_vK-_400x400.jpg'
@@ -33,17 +55,14 @@ function TweetBox() {
       </div>
       <div className='  flex-1 '>
         {/* input tweet>>>>>>>>>>>>>>>>>>>>>> */}
-
         <form className='divide-y'>
           <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={tweetContent}
+            onChange={(e) => setTweetContent(e.target.value)}
             placeholder="What's happening?"
-            className=' bg-transparent min-h-[75px] outline-none text-[#d9d9d9] text-xl placeholder-gray-500 tracking-wide  overflow-hidden resize-none p-2 '
+            className=' bg-transparent min-h-[75px] outline-none text-[#d9d9d9] text-xl placeholder-gray-500 tracking-wide  overflow-hidden resize-none p-2 w-full '
           />
         </form>
-        {/* input tweet<<<<<<<<<<<<<<<<<<< */}
-
         <div className='relative mt-3 flex justify-between'>
           <div className='flex items-center justify-around w-[136px] h-9'>
             <div className='w-fit'>
@@ -81,8 +100,9 @@ function TweetBox() {
             )}
           </div>
           <button
-            className=' w-22 px-4 bg-orange-500 rounded-full h-[34px]  font-bold text-lg hover:opacity-80 active:scale-90 transition-all select-none appearance-none'
-            disabled={!input && !selectedFile}
+            onClick={sendTweet}
+            className=' w-22 px-4 bg-orange-500 rounded-full h-[34px]  font-bold text-lg disabled:opacity-50 active:scale-90 transition-all select-none appearance-none'
+            disabled={!tweetContent.trim()}
           >
             Tweet
           </button>
