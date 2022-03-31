@@ -10,7 +10,7 @@ import {useState, useRef} from 'react';
 
 function TweetBox() {
   const [input, setInput] = useState('');
-  const [item, setItem] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
   const imageSelect = useRef(null);
   const [chosenEmoji, setChosenEmoji] = useState(null);
 
@@ -32,7 +32,8 @@ function TweetBox() {
         />
       </div>
       <div className='  flex-1 '>
-        {/* input tweet<<<<<<<<<<<<<<<<<<< */}
+        {/* input tweet>>>>>>>>>>>>>>>>>>>>>> */}
+
         <form className='divide-y'>
           <textarea
             value={input}
@@ -42,6 +43,7 @@ function TweetBox() {
           />
         </form>
         {/* input tweet<<<<<<<<<<<<<<<<<<< */}
+
         <div className='relative mt-3 flex justify-between'>
           <div className='flex items-center justify-around w-[136px] h-9'>
             <div className='w-fit'>
@@ -78,7 +80,10 @@ function TweetBox() {
               />
             )}
           </div>
-          <button className=' w-22 px-4 bg-orange-500 rounded-full h-[34px]  font-bold text-lg hover:opacity-80 active:scale-90 transition-all select-none appearance-none'>
+          <button
+            className=' w-22 px-4 bg-orange-500 rounded-full h-[34px]  font-bold text-lg hover:opacity-80 active:scale-90 transition-all select-none appearance-none'
+            disabled={!input && !selectedFile}
+          >
             Tweet
           </button>
         </div>

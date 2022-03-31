@@ -10,4 +10,15 @@
   .hoverAnimation {
     @apply hover:bg-[#d9d9d9] hover:bg-opacity-10 rounded-full cursor-pointer w-[52px] h-[52px] xl:w-auto xl:h-auto xl:py-3 xl:px-4 transition duration-200 ease-out;
   }
+
+  .iconHoverBlue {
+    @apply hover:cursor-pointer hover:opacity-80 hover:rounded-full hover:bg-blue-400  hover:fill-blue-600;
+  }
+
+  .iconHoverGreen {
+    @apply hover:cursor-pointer hover:opacity-80 hover:rounded-full hover:bg-green-400  hover:fill-green-600;
+  }
+  .iconHoverRed {
+    @apply hover:cursor-pointer hover:opacity-80 hover:rounded-full hover:bg-red-400  hover:fill-red-600;
+  }
 }
