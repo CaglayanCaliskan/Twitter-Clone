@@ -6,10 +6,13 @@
 
 - Next Js
 - Tailwind Css
+- Firebase
+
+
 
 
 ## Live Demo
-
+with response design
 _[Live Demo](https://cheery-dango-86516d.netlify.app/)_
 
 
