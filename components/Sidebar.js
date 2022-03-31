@@ -13,7 +13,7 @@ import Dots from '../assets/icons/Dots.svg';
 
 function Sidebar() {
   return (
-    <div className=' sm:flex flex-col  items-center xl:items-start w-fit xl:w-[275px]  fixed h-full'>
+    <div className='sm:flex flex-col items-center xl:items-start  xl:w-[275px]  fixed h-full transition-all'>
       <div>
         <div className='flex items-center justify-center w-[52px] h-[52px] sm:my-0.5 sm:mx-5 hoverAnimation p-0.5 '>
           <Image src='https://rb.gy/ogau5a' width={30} height={30} />
@@ -29,7 +29,8 @@ function Sidebar() {
           <SidebarOption text={'Profile'} Icon={Profile} />
           <SidebarOption text={'More'} Icon={More} />
         </div>
-        <button className=' hidden xl:inline-block bg-orange-500 rounded-full w-11/12 h-[52px] ml-4 my-4 font-bold text-lg hover:opacity-80'>
+        {/* button tweet */}
+        <button className=' hidden md:inline-block md:w-28 bg-orange-500 rounded-full xl:w-[208px]  h-[52px] ml-4 my-4 font-bold text-lg hover:opacity-80 active:scale-90 transition-all select-none'>
           Tweet
         </button>
       </div>
@@ -45,7 +46,7 @@ function Sidebar() {
           <p className='text-[#6e767d]'>@asd</p>
         </div>
         <div className='flex-1 flex justify-end'>
-          <Dots className='md:fill-white   md:h-7 md:inline-block hidden  ' />
+          <Dots className='fill-white  h-7 hidden md:block  ' />
         </div>
       </div>
     </div>
