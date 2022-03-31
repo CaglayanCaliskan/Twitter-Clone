@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Twitter Clone
+
+> > > > > On Progressing...
+
+## Used Technologies
+
+- Next Js
+- Tailwind Css
+
+
+## Live Demo
+
+_[Live Demo](https://cheery-dango-86516d.netlify.app/)_
+
 
 ## Getting Started
 
