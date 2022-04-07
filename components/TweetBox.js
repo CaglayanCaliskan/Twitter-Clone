@@ -42,10 +42,7 @@ function TweetBox({onSubmitTweet}) {
   };
 
   return (
-    <div
-      className='flex px-4 py-1 h-fit border-b border-gray-700 '
-      onClick={() => chosenEmoji && setChosenEmoji(!chosenEmoji)}
-    >
+    <div className='flex px-4 py-1 h-fit border-b border-gray-700 '>
       <div className='  pt-1 flex items-start justify-center'>
         <img
           src='https://pbs.twimg.com/profile_images/1012204118969069571/cfS0_vK-_400x400.jpg'
