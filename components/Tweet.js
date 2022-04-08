@@ -8,12 +8,10 @@ function Tweet({tweet}) {
   return (
     <div className='py-2 h-fit border-b border-gray-700 w-full '>
       <div className='flex w-full'>
-        <div className=' min-w-fit mx-4 py-2'>
-          <img
-            src='https://pbs.twimg.com/profile_images/1012204118969069571/cfS0_vK-_400x400.jpg'
-            alt='a'
-            className='h-12 w-12 rounded-full mr-2.5 ml-1.5'
-          />
+        <div className=' min-w-fit mx-2 py-2'>
+          <span className='h-12 w-12 rounded-full xl:mx-4   bg-blue-400 flcenter '>
+            U
+          </span>
         </div>
         <div className=' w-full '>
           <div className=' flex h-7 w-full justify-between pr-2'>
@@ -34,17 +32,14 @@ function Tweet({tweet}) {
           {/* tweet icons */}
 
           <div className='flex my-4 items-center justify-between w-full h-fit'>
-            <div className='w-fit flex items-center'>
+            <div className='w-fit flex items-center iconHoverBlue'>
               <Comment className='fill-gray-500 iconHoverBlue w-9 h-9 p-2' />
-              <span className='ml-2'>2</span>
             </div>
             <div className='w-fit flex items-center'>
               <Retweet className='fill-gray-500  iconHoverGreen w-9 h-9 p-2' />
-              <span className='ml-2'>2</span>
             </div>
             <div className='w-fit flex items-center'>
               <Like className='fill-gray-500 iconHoverRed w-9 h-9 p-2' />
-              <span className='ml-2'>2</span>
             </div>
             <div className='w-fit flex items-center'>
               <Share className='fill-gray-500 iconHoverBlue w-9 h-9 p-2' />

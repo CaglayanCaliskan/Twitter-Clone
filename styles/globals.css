@@ -8,20 +8,20 @@
 }
 @layer components {
   .hoverAnimation {
-    @apply hover:bg-[#d9d9d9] hover:bg-opacity-10 rounded-full cursor-pointer xl:h-auto xl:py-3 xl:px-4 transition duration-200 ease-out;
+    @apply hover:bg-[#d9d9d9]  hover:bg-opacity-10 rounded-full cursor-pointer  transition duration-200 ease-out;
   }
   .flcenter {
     @apply flex justify-center items-center;
   }
 
   .iconHoverBlue {
-    @apply hover:cursor-pointer hover:opacity-80 hover:rounded-full hover:bg-blue-400  hover:fill-blue-600;
+    @apply hover:cursor-pointer transition-all hover:opacity-70 hover:rounded-full hover:bg-blue-400  hover:fill-blue-700;
   }
 
   .iconHoverGreen {
-    @apply hover:cursor-pointer hover:opacity-80 hover:rounded-full hover:bg-green-400  hover:fill-green-600;
+    @apply hover:cursor-pointer transition-all hover:opacity-70 hover:rounded-full hover:bg-green-300  hover:fill-green-600;
   }
   .iconHoverRed {
-    @apply hover:cursor-pointer hover:opacity-80 hover:rounded-full hover:bg-red-400  hover:fill-red-600;
+    @apply hover:cursor-pointer transition-all hover:opacity-70 hover:rounded-full hover:bg-red-400  hover:fill-red-600;
   }
 }

@@ -13,7 +13,7 @@ import Gif from '../assets/icons/Gif.svg';
 import Emoji from '../assets/icons/Emoji.svg';
 import Location from '../assets/icons/Location.svg';
 
-function TweetBox({onSubmitTweet}) {
+function TweetBox() {
   const [tweetContent, setTweetContent] = useState('');
   const imageSelect = useRef(null);
   const [chosenEmoji, setChosenEmoji] = useState(null);
@@ -42,13 +42,11 @@ function TweetBox({onSubmitTweet}) {
   };
 
   return (
-    <div className='flex px-4 py-1 h-fit border-b border-gray-700 '>
-      <div className='  pt-1 flex items-start justify-center'>
-        <img
-          src='https://pbs.twimg.com/profile_images/1012204118969069571/cfS0_vK-_400x400.jpg'
-          alt='a'
-          className='h-12 w-12 rounded-full xl:mr-2.5 mx-1.5'
-        />
+    <div className='flex px-2 py-1 h-fit border-b border-gray-700 '>
+      <div className='  pt-1 flcenter'>
+        <span className='h-12 w-12 rounded-full xl:mx-4   bg-blue-400 flcenter '>
+          U
+        </span>
       </div>
       <div className='  flex-1 '>
         {/* input tweet>>>>>>>>>>>>>>>>>>>>>> */}

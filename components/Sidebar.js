@@ -19,7 +19,7 @@ function Sidebar() {
       </div>
       {/* options */}
       <div className=' mt-0.5 mb-1 sm:px-3  '>
-        <SidebarOption text={'Home '} Icon={HomeIcon} active />
+        <SidebarOption text={'Home'} Icon={HomeIcon} active />
         <SidebarOption text={'Explore'} Icon={Explore} />
         <SidebarOption text={'Communities'} Icon={Communities} />
         <SidebarOption text={'Notifications'} Icon={Notifications} />
@@ -35,7 +35,13 @@ function Sidebar() {
       </button>
 
       {/* profile */}
-      <div className='hoverAnimation flcenter mt-auto my-4'>
+
+      {/*  */}
+
+      <div
+        onClick={() => console.log('eole')}
+        className='hoverAnimation flcenter mt-auto my-4 relative '
+      >
         <span className='h-10 w-10 rounded-full xl:mr-8  bg-blue-400 flcenter '>
           U
         </span>
