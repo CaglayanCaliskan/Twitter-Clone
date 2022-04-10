@@ -21,7 +21,7 @@ function Feed() {
   );
 
   return (
-    <div className='flex-grow border-l border-r border-gray-700 ml-[52px] sm:ml-[92px] md:ml-[128px] xl:ml-[275px]  text-cyan-50'>
+    <div className='flex-grow pagecenter'>
       <TopHeader />
       <TweetBox />
       {tweets.map((tweet, index) => (

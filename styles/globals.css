@@ -24,4 +24,7 @@
   .iconHoverRed {
     @apply hover:cursor-pointer transition-all hover:opacity-70 hover:rounded-full hover:bg-red-400  hover:fill-red-600;
   }
+  .pagecenter {
+    @apply border border-r border-gray-700 ml-[52px] sm:ml-[92px] md:ml-[128px] xl:ml-[275px] xl:w-[598px]  text-cyan-50;
+  }
 }
