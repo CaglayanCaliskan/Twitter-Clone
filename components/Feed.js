@@ -21,13 +21,15 @@ function Feed() {
   );
 
   return (
-    <div className='flex-grow pagecenter'>
-      <TopHeader />
-      <TweetBox />
-      {tweets.map((tweet, index) => (
-        <Tweet key={index} tweet={tweet.data()} />
-      ))}
-    </div>
+    <>
+      <div className='pagecenter'>
+        <TopHeader />
+        <TweetBox />
+        {tweets.map((tweet, index) => (
+          <Tweet key={index} tweet={tweet.data()} />
+        ))}
+      </div>
+    </>
   );
 }
 

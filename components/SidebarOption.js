@@ -3,6 +3,7 @@ import {useRouter} from 'next/router';
 
 function SidebarOption({text, Icon}) {
   const router = useRouter();
+  console.log(router.pathname);
   return (
     <Link href={text === 'Home' ? '/' : `/navi/${text}`}>
       <div
@@ -15,7 +16,7 @@ function SidebarOption({text, Icon}) {
         <Icon
           className={`${
             router.pathname === '/navi/' + text
-              ? 'fill-orange-600'
+              ? 'fill-orange-500'
               : 'fill-white'
           } fill-white  h-[26.5px]  pointer-events-none`}
         />

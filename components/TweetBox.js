@@ -43,7 +43,7 @@ function TweetBox() {
 
   return (
     <div className='flex px-2 py-1 h-fit border-b border-gray-700 '>
-      <div className='  pt-1 flcenter'>
+      <div className='  pt-1 flcenter items-start'>
         <span className='h-12 w-12 rounded-full xl:mx-4   bg-blue-400 flcenter '>
           U
         </span>

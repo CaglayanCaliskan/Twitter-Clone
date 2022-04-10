@@ -39,18 +39,8 @@ function Sidebar() {
 
       {/* profile */}
 
-      <div
-        onClick={() => console.log('eole')}
-        className='hoverAnimation flcenter xl:p-4 mt-auto my-4 relative '
-      >
-        <span className='h-10 w-10 rounded-full xl:mr-4  bg-blue-400 flcenter '>
-          U
-        </span>
-        <div className='hidden xl:inline xl:leading-5'>
-          <h4 className='font-bold'>LOG IN</h4>
-          <p className='text-[#6e767d]'>please</p>
-        </div>
-        <Dots className='fill-white hidden xl:block xl:ml-16 xl:h-7' />
+      <div className=' hidden xl:block hoverAnimation flcenter xl:p-4 mt-auto my-4 relative '>
+        Profile details
       </div>
     </div>
   );
