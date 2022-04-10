@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import SidebarOption from './SidebarOption';
+import Link from 'next/dist/client/link';
 //icons
 import HomeIcon from '../assets/icons/Home.svg';
 import Explore from '../assets/icons/Explore.svg';
@@ -14,9 +15,11 @@ import Dots from '../assets/icons/Dots.svg';
 function Sidebar() {
   return (
     <div className='sm:flex  flex-col  items-center xl:items-start  xl:w-[275px]  fixed h-full '>
-      <div className='flcenter w-[52px] h-[52px] sm:my-0.5 sm:mx-5 hoverAnimation p-0.5 '>
-        <Image src='https://rb.gy/ogau5a' width={30} height={30} />
-      </div>
+      <Link href='/'>
+        <div className='flcenter w-[52px] h-[52px] sm:my-0.5 sm:mx-5 hoverAnimation p-0.5 '>
+          <Image src='https://rb.gy/ogau5a' width={30} height={30} />
+        </div>
+      </Link>
       {/* options */}
       <div className=' mt-0.5 mb-1 sm:px-3  '>
         <SidebarOption text={'Home'} Icon={HomeIcon} />

@@ -6,7 +6,7 @@ function MyApp({Component, pageProps}) {
   return (
     <div className='bg-black text-white min-h-screen flex max-w-[1288px] mx-auto'>
       <Sidebar />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <Wigets />
     </div>
   );

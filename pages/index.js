@@ -8,9 +8,7 @@ export default function Home() {
         <title>Twitter Clone</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>
-        <Feed />
-      </main>
+      <Feed />
     </>
   );
 }
